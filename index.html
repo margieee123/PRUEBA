@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serenity Spa | Panel Administrativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand__icon">✦</span>
+          <div>
+            <h1>Serenity Spa</h1>
+            <p>Administrador</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a class="menu__item menu__item--active" href="#">Resumen</a>
+          <a class="menu__item" href="#">Agenda</a>
+          <a class="menu__item" href="#">Clientes</a>
+          <a class="menu__item" href="#">Servicios</a>
+          <a class="menu__item" href="#">Personal</a>
+          <a class="menu__item" href="#">Inventario</a>
+          <a class="menu__item" href="#">Pagos</a>
+          <a class="menu__item" href="#">Reportes</a>
+        </nav>
+
+        <div class="sidebar__card">
+          <p>Ocupación de hoy</p>
+          <strong id="occupationRate">82%</strong>
+          <span>42 citas confirmadas</span>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Panel Administrativo</h2>
+            <p>Visión general del spa para hoy</p>
+          </div>
+          <div class="topbar__actions">
+            <input type="search" placeholder="Buscar cliente, cita o servicio" />
+            <button>Nueva cita</button>
+          </div>
+        </header>
+
+        <section class="stats">
+          <article class="stat-card">
+            <p>Ingresos del día</p>
+            <h3>$2,850</h3>
+            <small class="up">+12% vs ayer</small>
+          </article>
+          <article class="stat-card">
+            <p>Citas de hoy</p>
+            <h3>47</h3>
+            <small class="up">+5 nuevas</small>
+          </article>
+          <article class="stat-card">
+            <p>Clientes nuevos</p>
+            <h3>9</h3>
+            <small class="up">+2 esta semana</small>
+          </article>
+          <article class="stat-card">
+            <p>Cancelaciones</p>
+            <h3>3</h3>
+            <small class="down">-1 vs ayer</small>
+          </article>
+        </section>
+
+        <section class="grid">
+          <article class="panel">
+            <div class="panel__title">
+              <h4>Próximas citas</h4>
+              <a href="#">Ver todo</a>
+            </div>
+            <ul id="appointmentsList" class="appointments"></ul>
+          </article>
+
+          <article class="panel">
+            <div class="panel__title">
+              <h4>Servicios más solicitados</h4>
+            </div>
+            <div class="bars">
+              <div class="bar" style="--value: 88">
+                <span>Masaje relajante</span>
+                <strong>88%</strong>
+              </div>
+              <div class="bar" style="--value: 70">
+                <span>Facial hidratante</span>
+                <strong>70%</strong>
+              </div>
+              <div class="bar" style="--value: 62">
+                <span>Pedicure spa</span>
+                <strong>62%</strong>
+              </div>
+              <div class="bar" style="--value: 45">
+                <span>Aromaterapia</span>
+                <strong>45%</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
